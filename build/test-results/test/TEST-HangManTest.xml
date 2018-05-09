@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HangManTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-05-06T16:27:21" hostname="agnes-Latitude-E6430" time="0.001">
+<testsuite name="HangManTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-05-07T17:22:23" hostname="agnes-Latitude-E6430" time="0.002">
   <properties/>
-  <testcase name="getStringWord" classname="HangManTest" time="0.001"/>
+  <testcase name="getStringWord" classname="HangManTest" time="0.002"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
