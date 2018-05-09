@@ -1,39 +1,48 @@
 import java.util.Random;
+import java.io.*;
 
 
 public class HangManApp{
 
-    public String randomWord;
+    Console myConsole = System.console();
+    int score;
+    int guesses;
+    int attempts;
 
-    //Test to check if a string is returned
+    public void playGame(){
+        attempts = 9;
+        App start = new App();
+        start.startGame();
+        String selectedDay = start.getWords();
+        char[] DaysOfTheWeek = selectedDay.toCharArray();
+        char[] weekday = new char[DaysOfTheWeek.length];
+        for(int d=0;d<DaysOfTheWeek.length;d++){
+            weekday[d] = '_';
+        }
+        String correctDay = new String(weekday);
+        StringBuilder answer = new StringBuilder(correctDay);
+        for(int a=0;a<10;a++){
+            System.out.println("You have " + attempts + " attempts left.\r\n Please guess a letter: ");
+            String guessedLetter = myConsole.readLine();
+            char letter = guessedLetter.charAt(0); 
+            System.out.println("selected letter: " + letter);
+            for(int j=0;j<DaysOfTheWeek.length;j++){
+                if(letter == DaysOfTheWeek[j]){
+                    answer.setCharAt(j, letter);
+                    System.out.println(answer + "\r\n");
+                    score++;
+                }
+            }
+            attempts--;
+            guesses++;
+            if(score==DaysOfTheWeek.length){
+                System.out.println("Congratulations you guessed it right!!. The day is " + answer);
+                a=10;
+            }
+            if(guesses==10){
+                System.out.println("You failed to get the right guess.start again.");
+            }
 
-    public String Words(){
-
-        return "Monday";
-
+        }
     }
-    //Function to check if words are being randomized
-    public String randomize(){
-
-      String [] myWords = {"Monday", "Tuesday", "Wednesday","Thursday","Friday"};
-
-      Random myRandomizedWord = new Random();
-
-      int indexedWord = myRandomizedWord.nextInt(1);
-
-      randomWord = myWords[indexedWord];
-
-      return randomWord;
-  }
-  //Function to check if words are converted to characters
-  public String [] convertToChar(String randomWord){
-    String [] CharWord = randomWord.split("");
-    return CharWord;
-}
-//Function to Break User input
-public String [] convertUIToChar(String userInput){
-  String [] splitUserInput = userInput.split("");
-  return splitUserInput;
-  }
-
 }
