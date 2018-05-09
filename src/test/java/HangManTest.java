@@ -15,5 +15,12 @@ public class HangManTest{
          HangManApp playHangman = new HangManApp();
          assertEquals("Monday", playHangman.randomize());
      }
+     //Test to see if Words are Split into Characters
+    @Test
+    public void game_WillMakeWordsCharacters(){
+        HangManApp playHangman = new HangManApp();
+        String [] charWord = {"M","o","n","d","a","y"};
+        assertEquals(charWord, playHangman.convertToChar("Monday"));
+    }
  
   }

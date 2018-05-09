@@ -24,4 +24,9 @@ public class HangManApp{
 
       return randomWord;
   }
+  //Function to check if words are converted to characters
+  public String [] convertToChar(String randomWord){
+    String [] CharWord = randomWord.split("");
+    return CharWord;
+}
   }
