@@ -22,5 +22,10 @@ public class HangManTest{
         String [] charWord = {"M","o","n","d","a","y"};
         assertEquals(charWord, playHangman.convertToChar("Monday"));
     }
- 
+    @Test
+    public void game_WillMakeUserInputCharacters(){
+        HangManApp playHangMan = new HangManApp();
+        String [] charWord = {"M","o","n","d","a","y"};
+        assertEquals(charWord, playHangMan.convertUIToChar("Monday"));
+    }
   }

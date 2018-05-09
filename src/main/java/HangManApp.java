@@ -29,4 +29,9 @@ public class HangManApp{
     String [] CharWord = randomWord.split("");
     return CharWord;
 }
+//Function to Break User input
+public String [] convertUIToChar(String userInput){
+  String [] splitUserInput = userInput.split("");
+  return splitUserInput;
   }
+}
