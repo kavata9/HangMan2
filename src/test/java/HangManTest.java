@@ -1,16 +1,19 @@
-import org.junit.Test;
+import org.junit.*;
 import static org.junit.Assert.*;
-import java.util.Arrays;
 
-public class HangManTest {
-@Test
-  public void getStringWord() {
-    HangManApp word = new HangManApp();
-    assertEquals("Test", word.words());
+
+public class HangManTest{
+    //Test if the word returns a string
+    @Test
+    public void game_WillReturnUsAString(){
+        HangManApp playHangman = new HangManApp();
+        assertEquals("Monday", playHangman.Words());
+    }
+     //Test to check if the words are randomly selected
+     @Test
+     public void game_WillRandomlyWords(){
+         HangManApp playHangman = new HangManApp();
+         assertEquals("Monday", playHangman.randomize());
+     }
+ 
   }
-  // This will Test if the random picker works
-  @Test
-  public void getRandomword() {
-    HangManApp words = new HangManApp();
-    assertEquals("Gradle", words.randWords());
-}

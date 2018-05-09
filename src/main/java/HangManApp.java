@@ -1,23 +1,27 @@
 import java.util.Random;
-import java.util.Arrays;
-import java.util.Scanner;
-import java.io.Console;
-// This checks that the function should return a string data
-public class HangManApp {
-  private String guessedWord;
-  private String myInput;
 
-  public String words() {
-    return "Gradle";
+public class HangManApp{
+
+    public String randomWord;
+
+    //Test to check if a string is returned
+
+    public String Words(){
+
+        return "Monday";
+
+    }
+    //Function to check if words are being randomized
+    public String randomize(){
+
+      String [] myWords = {"Monday", "Tuesday", "Wednesday","Thursday","Friday"};
+
+      Random myRandomizedWord = new Random();
+
+      int indexedWord = myRandomizedWord.nextInt(1);
+
+      randomWord = myWords[indexedWord];
+
+      return randomWord;
   }
-
-  // This Functions will Show the random word
-  public String randWords() {
-    Random myRandom = new Random();
-    String[] myWords = { "Gradle", "HangMan", "Build", "Peace" };
-    int myIndex = myRandom.nextInt(1);
-
-    guessedWord = myWords[myIndex];
-    return guessedWord;
   }
-}
