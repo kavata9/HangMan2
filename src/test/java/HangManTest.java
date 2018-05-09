@@ -28,4 +28,5 @@ public class HangManTest{
         String [] charWord = {"M","o","n","d","a","y"};
         assertEquals(charWord, playHangMan.convertUIToChar("Monday"));
     }
+    
   }

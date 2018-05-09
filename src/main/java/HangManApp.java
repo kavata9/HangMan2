@@ -1,5 +1,6 @@
 import java.util.Random;
 
+
 public class HangManApp{
 
     public String randomWord;
@@ -34,4 +35,5 @@ public String [] convertUIToChar(String userInput){
   String [] splitUserInput = userInput.split("");
   return splitUserInput;
   }
+
 }
